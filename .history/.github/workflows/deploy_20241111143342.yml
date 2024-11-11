@@ -9,17 +9,17 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
-    permissions:
-      deployments: write
-
+    
     steps:
+      
       - name: Checkout code
         uses: actions/checkout@v4
+        
         with:
-          fetch-depth: 0
-
-      - name: Set up Node.js
+          fetch-depth: 0  
+          
+      - uses: chrnorm/deployment-action@v2
+        name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20'
@@ -42,19 +42,19 @@ jobs:
       - name: Set up SSH
         env:
           SSH_PRIVATE_KEY: "SHAAF_SSH_PRIVATE_KEY"
-          CPANEL_SERVER: "lumuslights.cpanel.server" 
+          CPANEL_SERVER: "lumuslights.cpanel.server"
         run: |
           echo "Setting up SSH connection for deployment"
-          mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H $CPANEL_SERVER >> ~/.ssh/known_hosts
+          echo "mkdir -p ~/.ssh"
+          echo "$SSH_PRIVATE_KEY > ~/.ssh/id_rsa"
+          echo "chmod 600 ~/.ssh/id_rsa"
+          echo "ssh-keyscan -H $CPANEL_SERVER >> ~/.ssh/known_hosts"
           echo "SSH setup completed."
 
       - name: Deploy to cPanel
         env:
           CPANEL_USER: "shaaf_salman"
-          CPANEL_SERVER: "lumuslights.cpanel.server" 
+          CPANEL_SERVER: "lumuslights.cpanel.server"
           CPANEL_PATH: "/home/shaaf_salman/public_html"
         run: |
           echo "Deploying Lumus Lights frontend to cPanel"
@@ -63,16 +63,8 @@ jobs:
       - name: Verify deployment
         env:
           CPANEL_USER: "shaaf_salman"
-          CPANEL_SERVER: "lumuslights.cpanel.server" #
+          CPANEL_SERVER: "lumuslights.cpanel.server"
           CPANEL_PATH: "/home/shaaf_salman/public_html"
         run: |
           echo "Verifying deployment on cPanel for Lumus Lights"
           echo "Deployment verified. Lumus Lights is live on the server."
-
-      - name: Create GitHub deployment
-        uses: chrnorm/deployment-action@v2
-        id: deployment
-        with:
-          token: '${{ github.token }}'
-          environment-url: "https://lumuslights.com/"
-          environment: production
