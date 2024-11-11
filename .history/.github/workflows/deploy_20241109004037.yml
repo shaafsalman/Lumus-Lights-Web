@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - SCRUM-11-Deployment
 
 jobs:
   deploy:
@@ -42,10 +41,10 @@ jobs:
           CPANEL_SERVER: "lumuslights.cpanel.server"
         run: |
           echo "Setting up SSH connection for deployment"
-          echo "-p ~/.ssh"
+          mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-          echo "600 ~/.ssh/id_rsa"
-          echo "ssh-keyscan -H $CPANEL_SERVER >> ~/.ssh/known_hosts"
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H $CPANEL_SERVER >> ~/.ssh/known_hosts
           echo "SSH setup completed."
 
       - name: Deploy to cPanel

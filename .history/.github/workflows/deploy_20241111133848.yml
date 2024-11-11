@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - SCRUM-11-Deployment
 
 jobs:
   deploy:
