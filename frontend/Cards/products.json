@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "name": "Modern Floor Lamp",
+    "description": "A stylish floor lamp to brighten your space.",
+    "category_id": 1,
+    "category_name": "Modern lamps",
+    "brand": "Brand A",
+    "thumbnail": "https://example.com/images/lamp1_thumbnail.png",
+    "skus": [
+      {
+        "id": 1,
+        "sku": "1",
+        "price": 45.00,
+        "stock": 10,
+        "color": "Black",
+        "images": [
+          "https://example.com/images/lamp1_black.png"
+        ]
+      },
+      {
+        "id": 2,
+        "sku": "2",
+        "price": 45.00,
+        "stock": 15,
+        "color": "White",
+        "images": [
+          "https://example.com/images/lamp1_white.png"
+        ]
+      },
+      {
+        "id": 3,
+        "sku": "3",
+        "price": 45.00,
+        "stock": 5,
+        "color": "Gold",
+        "images": [
+          "https://example.com/images/lamp1_gold.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Elegant Table Lamp",
+    "description": "An elegant lamp for your table.",
+    "category_id": 2,
+    "category_name": "Table lamps",
+    "brand": "Brand B",
+    "thumbnail": "https://example.com/images/lamp2_thumbnail.png",
+    "skus": [
+      {
+        "id": 4,
+        "sku": "1",
+        "price": 30.00,
+        "stock": 20,
+        "color": "Bronze",
+        "images": [
+          "https://example.com/images/lamp2_bronze.png"
+        ]
+      },
+      {
+        "id": 5,
+        "sku": "2",
+        "price": 30.00,
+        "stock": 25,
+        "color": "White",
+        "images": [
+          "https://example.com/images/lamp2_white.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Compact Desk Lamp",
+    "description": "A compact desk lamp for your workspace.",
+    "category_id": 3,
+    "category_name": "Desk lamps",
+    "brand": "Brand C",
+    "thumbnail": "https://example.com/images/lamp3_thumbnail.png",
+    "skus": [
+      {
+        "id": 6,
+        "sku": "1",
+        "price": 20.00,
+        "stock": 30,
+        "color": "Black",
+        "images": [
+          "https://example.com/images/lamp3_black.png"
+        ]
+      },
+      {
+        "id": 7,
+        "sku": "2",
+        "price": 20.00,
+        "stock": 10,
+        "color": "Silver",
+        "images": [
+          "https://example.com/images/lamp3_silver.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Luxury Ceiling Light",
+    "description": "A luxury ceiling light for sophisticated decor.",
+    "category_id": 4,
+    "category_name": "Ceiling lights",
+    "brand": "Brand D",
+    "thumbnail": "https://example.com/images/lamp4_thumbnail.png",
+    "skus": [
+      {
+        "id": 8,
+        "sku": "1",
+        "price": 120.00,
+        "stock": 5,
+        "color": "Gold",
+        "images": [
+          "https://example.com/images/lamp4_gold.png"
+        ]
+      },
+      {
+        "id": 9,
+        "sku": "2",
+        "price": 120.00,
+        "stock": 8,
+        "color": "White",
+        "images": [
+          "https://example.com/images/lamp4_white.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Industrial Floor Lamp",
+    "description": "An industrial-style floor lamp for a rustic look.",
+    "category_id": 5,
+    "category_name": "Floor lamps",
+    "brand": "Brand E",
+    "thumbnail": "https://example.com/images/lamp5_thumbnail.png",
+    "skus": [
+      {
+        "id": 10,
+        "sku": "1",
+        "price": 70.00,
+        "stock": 15,
+        "color": "Black",
+        "images": [
+          "https://example.com/images/lamp5_black.png"
+        ]
+      },
+      {
+        "id": 11,
+        "sku": "2",
+        "price": 70.00,
+        "stock": 10,
+        "color": "Rust",
+        "images": [
+          "https://example.com/images/lamp5_rust.png"
+        ]
+      }
+    ]
+  }
+]
