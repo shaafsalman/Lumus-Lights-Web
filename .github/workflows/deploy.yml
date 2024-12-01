@@ -71,4 +71,4 @@ jobs:
         with:
           token: '${{ github.token }}'
           environment-url: "https://lumuslights.com/"
-          environment: Staging
+          environment: Production
